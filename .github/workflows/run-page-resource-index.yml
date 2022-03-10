@@ -9,6 +9,10 @@ jobs:
         uses: shivammathur/setup-php@2.17.1
         with:
           php-version: "7.4"
+      - name: current dir
+        run: ls
+      - name: parent dir
+        run: ls ..   
       - name: Install dependencies
         run: composer install
   execution:
