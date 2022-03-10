@@ -12,6 +12,7 @@ jobs:
       - name: Install dependencies
         run: composer install
   execution:
+    needs: setup
     runs-on: ubuntu-20.04  
     steps:
       - name: run page://self/
