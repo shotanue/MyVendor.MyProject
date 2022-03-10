@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Index",
+  "title": "Index",
+  "type": "object",
+  "required": ["greeting", "_links"],
+  "additionalProperties": false,
+  "properties": {
+    "greeting": {
+      "type": "string"
+    },
+    "_links": {
+      "type": "object",
+      "required": ["self"],
+      "additionalProperties": false,
+      "properties": {
+        "self": {
+          "type": "object",
+          "required": ["href"],
+          "additionalProperties": false,
+          "properties": {
+            "href": {
+              "type": "string",
+              "format": "uri-reference"
+            }
+          }
+        }
+      }
+    }
+  }
+}
