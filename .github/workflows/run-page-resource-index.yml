@@ -1,0 +1,10 @@
+- name: Setup PHP Action
+  uses: shivammathur/setup-php@2.17.1
+  with:
+    php-version: "7.4"
+
+- name: Install dependencies
+  run: composer install
+
+- name: run page://self/
+  run: php bin/page.php get '/'
